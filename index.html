@@ -1,0 +1,2697 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Daisy Shye — Web, follow, review Google &amp; Facebook cho tiệm nails &amp; nhà hàng tại Mỹ. Liên hệ: sy69dz@gmail.com · 229-228-0010." />
+  <title>Daisy Shye — Web, follow, review &amp; Facebook · nails &amp; dining tại Mỹ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1c1416;
+      --muted: #6e5a5d;
+      --line: #f0e6e8;
+      --white: #ffffff;
+      --cream: #fffafa;
+      --blush: #fef6f6;
+      --rose-50: #fff1f2;
+      --rose-100: #ffe4e6;
+      --rose-200: #fecdd3;
+      --accent: #c94a5a;
+      --accent-hover: #b03d4c;
+      --accent-deep: #9a3040;
+      --accent-glow: rgba(201, 74, 90, 0.15);
+      --shadow: 0 4px 24px rgba(28, 20, 22, 0.06);
+      --shadow-lg: 0 24px 64px rgba(154, 48, 64, 0.08);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+      font-size: 1rem;
+      overflow-x: hidden;
+      padding-bottom: max(88px, calc(72px + env(safe-area-inset-bottom, 0px)));
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrap {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header.site {
+      background: rgba(255, 250, 250, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    .brand:hover {
+      text-decoration: none;
+      color: var(--accent);
+    }
+
+    .brand:hover .brand-img {
+      opacity: 0.92;
+    }
+
+    .brand-img {
+      display: block;
+      height: 100px;
+      width: auto;
+      max-width: min(280px, 56vw);
+      object-fit: contain;
+    }
+
+    .brand-logo-footer {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.97);
+      padding: 8px 14px;
+      border-radius: 12px;
+      line-height: 0;
+    }
+
+    .brand-logo-footer .brand-img {
+      height: 70px;
+      max-width: min(260px, 72vw);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a:not(.btn) {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-decoration: none;
+    }
+
+    .nav-links a:not(.btn):hover {
+      color: var(--ink);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.875rem;
+      font-family: inherit;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.2s, background 0.2s;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-primary {
+      background: linear-gradient(180deg, var(--accent) 0%, var(--accent-hover) 100%);
+      color: #fff;
+      box-shadow: 0 4px 20px var(--accent-glow);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      text-decoration: none;
+      box-shadow: 0 6px 28px rgba(201, 74, 90, 0.25);
+    }
+
+    .btn-ghost {
+      background: var(--white);
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .btn-ghost:hover {
+      background: var(--blush);
+      text-decoration: none;
+    }
+
+    .btn-white {
+      background: #fff;
+      color: var(--accent-deep);
+    }
+
+    .btn-white:hover {
+      background: var(--rose-50);
+      text-decoration: none;
+    }
+
+    .btn-outline-light {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .btn-outline-light:hover {
+      background: rgba(255, 255, 255, 0.12);
+      text-decoration: none;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      padding: 48px 0 72px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -40%;
+      right: -20%;
+      width: 70%;
+      height: 120%;
+      background: radial-gradient(ellipse, rgba(254, 205, 211, 0.45) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: -30%;
+      left: -15%;
+      width: 50%;
+      height: 80%;
+      background: radial-gradient(ellipse, rgba(255, 228, 230, 0.7) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 48px;
+      align-items: center;
+    }
+
+    @media (min-width: 960px) {
+      .hero-grid {
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 56px;
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-content > * {
+      animation: fadeUp 0.7s ease backwards;
+    }
+
+    .hero-content > *:nth-child(1) { animation-delay: 0.05s; }
+    .hero-content > *:nth-child(2) { animation-delay: 0.1s; }
+    .hero-content > *:nth-child(3) { animation-delay: 0.15s; }
+    .hero-content > *:nth-child(4) { animation-delay: 0.2s; }
+    .hero-content > *:nth-child(5) { animation-delay: 0.25s; }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: var(--white);
+      border: 1px solid var(--rose-200);
+      color: var(--accent-deep);
+      box-shadow: var(--shadow);
+    }
+
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.125rem, 5vw, 3.25rem);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+      margin-bottom: 20px;
+      color: var(--ink);
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+      position: relative;
+    }
+
+    .hero-lead {
+      font-size: 1.125rem;
+      color: var(--muted);
+      max-width: 36rem;
+      margin-bottom: 28px;
+      line-height: 1.65;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .micro-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 28px;
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+
+    .micro-proof span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .micro-proof strong {
+      color: var(--ink);
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--rose-200), var(--accent));
+    }
+
+    .hero-card h2 {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--ink);
+    }
+
+    .metric-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    @media (min-width: 420px) {
+      .metric-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .metric {
+      text-align: center;
+      padding: 16px 10px;
+      background: var(--blush);
+      border-radius: 14px;
+      border: 1px solid var(--rose-100);
+    }
+
+    .metric b {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+
+    .metric span {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-top: 6px;
+      display: block;
+    }
+
+    .hero-card-note {
+      margin-top: 18px;
+      font-size: 0.8125rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .floating-badge {
+      position: absolute;
+      bottom: -12px;
+      right: 16px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 16px;
+      box-shadow: var(--shadow);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--accent-deep);
+      max-width: 200px;
+      animation: fadeUp 0.8s ease 0.4s backwards;
+    }
+
+    /* Marquee clients */
+    .marquee-section {
+      background: var(--white);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 28px 0;
+    }
+
+    .marquee-head {
+      text-align: center;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .logo-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 12px 20px;
+    }
+
+    .logo-chip {
+      padding: 12px 20px;
+      border-radius: 12px;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      font-weight: 700;
+      font-size: 0.8125rem;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    /* Stats strip */
+    .stats-strip {
+      padding: 56px 0;
+      background: linear-gradient(180deg, var(--cream) 0%, var(--white) 50%, var(--cream) 100%);
+    }
+
+    .stats-grid {
+      display: grid;
+      gap: 24px;
+      text-align: center;
+    }
+
+    @media (min-width: 640px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .stat-block h3 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .stat-block p {
+      margin-top: 10px;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .stat-block .sub {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    .disclaimer {
+      margin-top: 32px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--muted);
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Section generic */
+    section.block {
+      padding: 80px 0;
+    }
+
+    section.block.white {
+      background: var(--white);
+    }
+
+    section.block.blush {
+      background: var(--blush);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      max-width: 640px;
+      margin-bottom: 48px;
+    }
+
+    .section-head.center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.375rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.0625rem;
+    }
+
+    /* Case studies */
+    .case-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    @media (min-width: 860px) {
+      .case-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .case-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 26px 24px;
+      transition: transform 0.25s, box-shadow 0.25s;
+      position: relative;
+    }
+
+    .case-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .case-tag {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 5px 10px;
+      border-radius: 8px;
+      background: var(--rose-50);
+      color: var(--accent-deep);
+      margin-bottom: 14px;
+    }
+
+    .case-card h3 {
+      font-size: 1.125rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .case-result {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin: 18px 0;
+      padding: 16px 0;
+      border-top: 1px dashed var(--line);
+      border-bottom: 1px dashed var(--line);
+    }
+
+    .case-result div strong {
+      display: block;
+      font-size: 1.375rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .case-result div span {
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .case-card > p:last-of-type {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* Testimonials */
+    .testimonial-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    @media (min-width: 800px) {
+      .testimonial-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .quote-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .stars {
+      color: #e8b923;
+      font-size: 0.9375rem;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    .quote-text {
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      color: var(--ink);
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    .quote-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--rose-200), var(--rose-100));
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 0.875rem;
+      color: var(--accent-deep);
+    }
+
+    .quote-author div strong {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 700;
+    }
+
+    .quote-author div span {
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+
+    /* Trust badges */
+    .trust-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    @media (min-width: 640px) {
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 960px) {
+      .trust-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .trust-item {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 20px 18px;
+      text-align: center;
+    }
+
+    .trust-item b {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+
+    .trust-item span {
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    /* Services */
+    .cards {
+      display: grid;
+      gap: 22px;
+    }
+
+    @media (min-width: 700px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1100px) {
+      .cards {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    /* Funnel: website → follow → review */
+    .funnel-wrap {
+      display: grid;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    @media (min-width: 860px) {
+      .funnel-wrap {
+        grid-template-columns: 1fr auto 1fr auto 1fr;
+        align-items: center;
+      }
+    }
+
+    .funnel-arrow {
+      display: none;
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 1.25rem;
+      padding: 0 4px;
+    }
+
+    @media (min-width: 860px) {
+      .funnel-arrow {
+        display: block;
+      }
+    }
+
+    .funnel-step {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .funnel-step b {
+      display: block;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .funnel-step strong {
+      display: block;
+      font-size: 1.0625rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .funnel-step p {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Portfolio websites */
+    .web-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    @media (min-width: 640px) {
+      .web-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 960px) {
+      .web-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .web-item {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .web-item:hover {
+      border-color: var(--rose-200);
+      box-shadow: var(--shadow);
+    }
+
+    .web-item .web-tag {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 0.6875rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 10px;
+      border-radius: 8px;
+      background: var(--rose-50);
+      color: var(--accent-deep);
+      margin-bottom: 12px;
+    }
+
+    .web-item h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+      flex: 1;
+    }
+
+    .web-item .web-meta {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .web-item a.outlink {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .web-item a.outlink:hover {
+      text-decoration: underline;
+    }
+
+    /* Facebook / Google run lists */
+    .run-split {
+      display: grid;
+      gap: 24px;
+    }
+
+    @media (min-width: 800px) {
+      .run-split {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+    }
+
+    .run-col {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px 22px;
+    }
+
+    .run-col h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .run-col h3 span.badge-plat {
+      font-size: 0.6875rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 8px;
+      border-radius: 6px;
+      background: var(--blush);
+      color: var(--accent-deep);
+    }
+
+    .run-col > .run-lead {
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .run-ul {
+      list-style: none;
+    }
+
+    .run-ul li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.875rem;
+    }
+
+    .run-ul li:last-child {
+      border-bottom: none;
+    }
+
+    .run-ul li strong {
+      display: block;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .run-ul li span {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .portfolio-note {
+      margin-top: 20px;
+      padding: 14px 18px;
+      background: var(--rose-50);
+      border: 1px solid var(--rose-200);
+      border-radius: 12px;
+      font-size: 0.8125rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .svc-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px 24px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .svc-card:hover {
+      border-color: var(--rose-200);
+      box-shadow: 0 16px 40px rgba(201, 74, 90, 0.08);
+    }
+
+    .svc-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: var(--rose-50);
+      border: 1px solid var(--rose-200);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 18px;
+    }
+
+    .svc-card h3 {
+      font-size: 1.125rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .svc-card > p {
+      color: var(--muted);
+      font-size: 0.9375rem;
+      margin-bottom: 16px;
+    }
+
+    .list-check {
+      list-style: none;
+    }
+
+    .list-check li {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      padding: 6px 0 6px 22px;
+      position: relative;
+    }
+
+    .list-check li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    /* Process + two col */
+    .two-col {
+      display: grid;
+      gap: 40px;
+      align-items: start;
+    }
+
+    @media (min-width: 880px) {
+      .two-col {
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 64px;
+      }
+    }
+
+    .step-list {
+      list-style: none;
+    }
+
+    .step-list li {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 18px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .step-list li:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, var(--accent) 0%, var(--accent-deep) 100%);
+      color: #fff;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+      font-size: 1.125rem;
+      box-shadow: 0 8px 24px var(--accent-glow);
+    }
+
+    .step-list h3 {
+      font-size: 1.0625rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .step-list p {
+      font-size: 0.9375rem;
+      color: var(--muted);
+    }
+
+    .industry-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .industry-tags span {
+      padding: 10px 16px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    /* FAQ */
+    .faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    details.faq-item {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    details.faq-item summary {
+      padding: 20px 22px;
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    details.faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.faq-item summary::after {
+      content: "+";
+      font-weight: 800;
+      color: var(--accent);
+      font-size: 1.25rem;
+    }
+
+    details.faq-item[open] summary::after {
+      content: "–";
+    }
+
+    details.faq-item .faq-a {
+      padding: 0 22px 20px;
+      font-size: 0.9375rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* CTA */
+    .cta-section {
+      padding: 72px 0 96px;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, #c94a5a 0%, #9a3040 50%, #7d2635 100%);
+      border-radius: 24px;
+      padding: 48px 28px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-box::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 60%;
+      height: 120%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .cta-box h2 {
+      position: relative;
+      font-size: clamp(1.5rem, 3vw, 2.125rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .cta-box p {
+      position: relative;
+      opacity: 0.92;
+      max-width: 480px;
+      margin: 0 auto 24px;
+      font-size: 1.0625rem;
+    }
+
+    .cta-actions {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    /* Language switch */
+    .lang-switch {
+      display: inline-flex;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .lang-switch button {
+      font-family: inherit;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 8px 12px;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .lang-switch button:hover {
+      color: var(--ink);
+    }
+
+    .lang-switch button.active {
+      background: var(--rose-50);
+      color: var(--accent-deep);
+    }
+
+    /* Pricing */
+    .pricing-grid {
+      display: grid;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    @media (min-width: 900px) {
+      .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .price-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .price-card.featured {
+      border-color: var(--accent);
+      box-shadow: 0 16px 48px var(--accent-glow);
+      transform: scale(1.02);
+      z-index: 1;
+    }
+
+    @media (max-width: 899px) {
+      .price-card.featured {
+        transform: none;
+      }
+    }
+
+    .price-card .price-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 0.6875rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 5px 10px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .price-card h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .price-card .price-tag {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .price-card .price-desc {
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .price-card ul {
+      list-style: none;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    .price-card ul li {
+      font-size: 0.875rem;
+      color: var(--ink);
+      padding: 8px 0 8px 26px;
+      position: relative;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .price-card ul li:last-child {
+      border-bottom: none;
+    }
+
+    .price-card ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .price-card .btn {
+      width: 100%;
+    }
+
+    .price-hosting-callout {
+      max-width: 640px;
+      margin: -4px auto 22px;
+      padding: 16px 20px;
+      background: var(--white);
+      border: 1px solid var(--rose-200);
+      border-radius: 14px;
+      font-size: 0.9375rem;
+      color: var(--ink);
+      line-height: 1.55;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(201, 74, 90, 0.06);
+    }
+
+    /* Website portfolio table */
+    .web-table-wrap {
+      margin-top: 28px;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--white);
+    }
+
+    .web-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+
+    .web-table th,
+    .web-table td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .web-table th {
+      font-size: 0.6875rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      background: var(--blush);
+    }
+
+    .web-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .web-table td a {
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    /* Chat bubble */
+    .chat-widget {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+    }
+
+    .chat-panel {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px;
+      box-shadow: var(--shadow-lg);
+      min-width: 220px;
+      display: none;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .chat-widget.is-open .chat-panel {
+      display: flex;
+    }
+
+    .chat-panel p {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 8px 2px;
+    }
+
+    .chat-panel a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: var(--blush);
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: var(--ink);
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .chat-panel a:hover {
+      background: var(--rose-100);
+      text-decoration: none;
+    }
+
+    .chat-fab {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
+      color: #fff;
+      font-size: 1.5rem;
+      line-height: 1;
+      box-shadow: 0 10px 32px var(--accent-glow);
+      display: grid;
+      place-items: center;
+      transition: transform 0.2s;
+    }
+
+    .chat-fab:hover {
+      transform: scale(1.05);
+    }
+
+    .chat-fab[aria-expanded="true"] {
+      transform: rotate(0deg) scale(0.95);
+    }
+
+    /* Footer */
+    footer.site {
+      background: var(--ink);
+      color: rgba(255, 255, 255, 0.65);
+      padding: 48px 0 32px;
+      font-size: 0.875rem;
+    }
+
+    footer.site .foot-grid {
+      display: grid;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 700px) {
+      footer.site .foot-grid {
+        grid-template-columns: 1.4fr 1fr 1fr;
+      }
+    }
+
+    footer.site strong {
+      color: #fff;
+      display: block;
+      margin-bottom: 14px;
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    footer.site a {
+      color: rgba(255, 255, 255, 0.65);
+      display: block;
+      padding: 4px 0;
+    }
+
+    footer.site a:hover {
+      color: #fff;
+    }
+
+    .foot-bottom {
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      text-align: center;
+      font-size: 0.8125rem;
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--white);
+      cursor: pointer;
+      flex-shrink: 0;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--ink);
+      border-radius: 1px;
+      transition: transform 0.25s ease, opacity 0.2s ease;
+      transform-origin: center;
+    }
+
+    header.site.nav-open .nav-toggle span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    header.site.nav-open .nav-toggle span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    header.site.nav-open .nav-toggle span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    img,
+    video,
+    iframe {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ——— Mobile & touch ——— */
+    @media (max-width: 900px) {
+      body.nav-menu-open {
+        overflow: hidden;
+        overscroll-behavior: none;
+      }
+
+      .wrap {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+      }
+
+      header.site {
+        padding-top: max(4px, env(safe-area-inset-top));
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        min-height: 56px;
+        row-gap: 0;
+      }
+
+      .brand {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .brand-img {
+        height:68px;
+        max-width: min(220px, 58vw);
+      }
+
+      .brand-logo-footer .brand-img {
+        height: 32px;
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 0 max(12px, env(safe-area-inset-bottom));
+        margin-top: 8px;
+        border-top: 1px solid var(--line);
+      }
+
+      header.site.nav-open .nav-links {
+        display: flex;
+      }
+
+      .nav-links .lang-switch {
+        order: -1;
+        margin-bottom: 4px;
+        width: 100%;
+      }
+
+      .nav-links .lang-switch button {
+        flex: 1;
+        padding: 12px 14px;
+        min-height: 44px;
+      }
+
+      .nav-links > a:not(.btn) {
+        padding: 14px 4px;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        font-size: 0.9375rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav-links > a.btn {
+        margin-top: 12px;
+        width: 100%;
+        min-height: 48px;
+        padding: 14px 18px;
+      }
+
+      .hero {
+        padding: 28px 0 40px;
+      }
+
+      .hero-grid {
+        gap: 28px;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.55rem, 6.8vw, 2.75rem);
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        overflow-wrap: break-word;
+      }
+
+      .hero-lead {
+        font-size: 1rem;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+      }
+
+      .hero-cta .btn {
+        width: 100%;
+        min-height: 48px;
+        justify-content: center;
+      }
+
+      .micro-proof {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+      }
+
+      .hero-card {
+        padding: 20px 18px;
+      }
+
+      .floating-badge {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        max-width: none;
+        margin-top: 16px;
+        padding: 14px 16px;
+        animation: none;
+      }
+
+      .logo-chip {
+        padding: 10px 14px;
+        font-size: 0.75rem;
+      }
+
+      .marquee-section {
+        padding: 20px 0;
+      }
+
+      .stats-strip {
+        padding: 40px 0;
+      }
+
+      .stat-block h3 {
+        font-size: clamp(1.65rem, 9vw, 2.5rem);
+      }
+
+      section.block {
+        padding: 48px 0;
+      }
+
+      .section-head {
+        margin-bottom: 28px;
+      }
+
+      .section-head h2 {
+        font-size: clamp(1.35rem, 5.5vw, 2rem);
+      }
+
+      .price-card {
+        padding: 22px 18px;
+      }
+
+      .price-card h3 {
+        padding-right: 72px;
+      }
+
+      .price-card .price-tag {
+        font-size: 1.5rem;
+      }
+
+      .web-table-wrap {
+        margin-left: max(-8px, calc(-1 * env(safe-area-inset-left)));
+        margin-right: max(-8px, calc(-1 * env(safe-area-inset-right)));
+        border-radius: 12px;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
+      }
+
+      .web-table {
+        min-width: 560px;
+        font-size: 0.8125rem;
+      }
+
+      .web-table th,
+      .web-table td {
+        padding: 12px 10px;
+      }
+
+      .cta-box {
+        padding: 36px 20px;
+        border-radius: 18px;
+      }
+
+      .cta-actions {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .cta-actions .btn {
+        width: 100%;
+        min-height: 48px;
+      }
+
+      details.faq-item summary {
+        padding: 18px 16px;
+        min-height: 52px;
+      }
+
+      .foot-bottom {
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+
+      .chat-widget {
+        bottom: max(16px, env(safe-area-inset-bottom));
+        right: max(16px, env(safe-area-inset-right));
+      }
+
+      .chat-fab {
+        width: 54px;
+        height: 54px;
+      }
+
+      .chat-panel {
+        max-width: calc(100vw - 32px - env(safe-area-inset-left) - env(safe-area-inset-right));
+      }
+    }
+
+    @media (max-width: 900px) and (min-width: 421px) {
+      .metric-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 420px) {
+      .metric-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metric {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        text-align: left;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 14px;
+      }
+
+      .metric b {
+        font-size: 1.125rem;
+      }
+
+      .metric span {
+        margin-top: 0;
+        text-align: right;
+      }
+    }
+
+    @media (min-width: 901px) {
+      .nav-toggle {
+        display: none !important;
+      }
+
+      .nav-links {
+        display: flex !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="#" aria-label="Daisy Shye — về đầu trang">
+        <img class="brand-img" src="logo.png" alt="Daisy Shye — Digital Marketing &amp; Growth Solutions" width="220" height="56" decoding="async" />
+      </a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Mở menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" id="mainNav" aria-label="Chính">
+        <div class="lang-switch" role="group" aria-label="Ngôn ngữ">
+          <button type="button" class="lang-btn active" data-set-lang="vi" aria-pressed="true">VI</button>
+          <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a href="#dan-chung" data-i18n="nav_proof">Dẫn chứng</a>
+        <a href="#lo-trinh-quang-cao" data-i18n="nav_funnel">Web · Follow · Review</a>
+        <a href="#dich-vu" data-i18n="nav_svc">Dịch vụ</a>
+        <a href="#bang-gia" data-i18n="nav_price">Bảng giá</a>
+        <a href="#website-da-lam" data-i18n="nav_web">Website</a>
+        <a href="#da-chay-ads" data-i18n="nav_ads">Đã chạy</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
+        <a class="btn btn-primary" href="#lien-he" style="padding: 10px 18px" data-i18n="nav_cta">Báo giá</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-content">
+        <div class="badge-row">
+          <span class="pill"><span class="pill-dot" aria-hidden="true"></span> <span data-i18n="hero_pill">Nhận audit miễn phí 15 phút</span></span>
+        </div>
+        <h1 data-i18n-html="hero_h1"><em>Website</em> · <em>chạy follow</em> · <em>review Google</em> · <em>Facebook</em> — cho tiệm nails &amp; nhà hàng tại Mỹ</h1>
+        <p class="hero-lead" data-i18n="hero_lead">
+          Bốn dịch vụ chủ đạo: <strong>làm &amp; viết website / landing</strong>, <strong>chạy follow</strong> trên Meta &amp; Instagram, <strong>xây chiến lược review Google Maps</strong> an toàn, và <strong>Facebook fanpage</strong> — thiết kế ảnh / layout bài đăng, lịch đăng <strong>theo ngày hoặc theo tuần</strong>. Có thể gắn link hoặc công cụ bên ngoài theo nhu cầu từng cửa hàng.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#lien-he" data-i18n="hero_btn1">Nhận tư vấn gói</a>
+          <a class="btn btn-ghost" href="#dan-chung" data-i18n="hero_btn2">Xem kết quả &amp; dẫn chứng</a>
+        </div>
+        <div class="micro-proof">
+          <span data-i18n-html="hero_mp1">✓ <strong>Website &amp; nội dung</strong> — viết copy, CTA, chuẩn mobile</span>
+          <span data-i18n-html="hero_mp2">✓ <strong>Chạy follow</strong> Meta / IG + <strong>Facebook</strong> design &amp; đăng bài định kỳ</span>
+          <span data-i18n-html="hero_mp3">✓ <strong>Review Google Maps</strong> — quy trình khách thật, theo policy</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <h2 data-i18n="hero_card_h2">Trọng tâm bốn dịch vụ</h2>
+          <div class="metric-grid">
+            <div class="metric">
+              <b>CPA</b>
+              <span data-i18n="hero_m1">Giảm dần</span>
+            </div>
+            <div class="metric">
+              <b>ROAS</b>
+              <span data-i18n="hero_m2">Theo dõi</span>
+            </div>
+            <div class="metric">
+              <b>CTR</b>
+              <span data-i18n="hero_m3">A/B test</span>
+            </div>
+          </div>
+          <p class="hero-card-note" data-i18n-html="hero_card_note">
+            <strong>Website</strong> là nơi khách tin &amp; hành động; <strong>Facebook &amp; follow</strong> đẩy lượt xem và inbox; <strong>review Google</strong> khóa niềm tin local — triển khai xuyên suốt, không làm lẻ tẻ.
+          </p>
+        </div>
+        <div class="floating-badge" data-i18n="hero_floating">“Fanpage đều đặn + follow đúng tệp — thấy rõ inbox tăng sau vài tuần” — khách nails / dining</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="marquee-section" aria-label="Ngành đã phục vụ">
+    <p class="marquee-head" data-i18n="marquee_head">Chuyên sâu · Thị trường Hoa Kỳ</p>
+    <div class="wrap">
+      <div class="logo-row">
+        <span class="logo-chip">Nail salon &amp; nail bar</span>
+        <span class="logo-chip">Tiệm nails (khách Mỹ &amp; Việt kiều)</span>
+        <span class="logo-chip">Nhà hàng Việt / Á tại Mỹ</span>
+        <span class="logo-chip">Quán ăn · takeout · CTA gọi / form</span>
+        <span class="logo-chip">Facebook design + đăng bài ngày / tuần</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-strip" id="dan-chung">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow" data-i18n="stats_eyebrow">Dẫn chứng nhanh</p>
+        <h2 data-i18n="stats_h2">Số liệu minh họa — thay bằng con số thật của bạn khi triển khai</h2>
+        <p data-i18n="stats_p">Minh họa quy mô — kết quả phụ thuộc bang / city, độ cạnh Google Maps, lịch đăng Facebook và ngân sách chạy follow &amp; reach.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-block">
+          <h3>120+</h3>
+          <p data-i18n="stat_1t">Chiến dịch follow &amp; fanpage</p>
+          <p class="sub" data-i18n="stat_1s">Meta · Facebook · Instagram</p>
+        </div>
+        <div class="stat-block">
+          <h3>38%</h3>
+          <p data-i18n="stat_2t">Giảm CPA trung bình*</p>
+          <p class="sub" data-i18n="stat_2s">Sau 6 tuần tối ưu</p>
+        </div>
+        <div class="stat-block">
+          <h3>4.8★</h3>
+          <p data-i18n="stat_3t">Điểm review mục tiêu Maps</p>
+          <p class="sub" data-i18n="stat_3s">Quy trình khách hàng thật</p>
+        </div>
+        <div class="stat-block">
+          <h3>72h</h3>
+          <p data-i18n="stat_4t">Thời gian phản hồi báo giá</p>
+          <p class="sub" data-i18n="stat_4s">Từ khi nhận brief</p>
+        </div>
+      </div>
+      <p class="disclaimer" data-i18n="stats_disclaimer">*Minh họa từ các case tương tự; không phải cam kết cho mọi hợp đồng. Bạn có thể sửa toàn bộ con số trong mã nguồn cho khớp hồ sơ thật.</p>
+    </div>
+  </section>
+
+  <section class="block white">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow" data-i18n="case_eyebrow">Case study</p>
+        <h2 data-i18n="case_h2">Kết quả theo từng nhóm ngành</h2>
+        <p data-i18n="case_p">Ví dụ minh họa cho tiệm nails &amp; dining tại Mỹ — thay tên city và số liệu thật của bạn.</p>
+      </div>
+      <div class="case-grid">
+        <article class="case-card">
+          <span class="case-tag">Nail salon — Texas (minh họa)</span>
+          <h3>CTA Messenger / Instagram → web</h3>
+          <div class="case-result">
+            <div>
+              <strong>+186%</strong>
+              <span>Tin nhắn DM / tháng</span>
+            </div>
+            <div>
+              <strong>−31%</strong>
+              <span>Cost / tin nhắn</span>
+            </div>
+          </div>
+          <p>Targeting radius + zip, creative set “before–after”, lookalike khách đã từng nhắn tin; remarketing 14 ngày.</p>
+        </article>
+        <article class="case-card">
+          <span class="case-tag">Nail bar — California (minh họa)</span>
+          <h3>Google Maps &amp; review tại Mỹ</h3>
+          <div class="case-result">
+            <div>
+              <strong>+42</strong>
+              <span>Review 5★ (6 tháng)</span>
+            </div>
+            <div>
+              <strong>Top 3 pack</strong>
+              <span>“nails near me” + city</span>
+            </div>
+          </div>
+          <p>Chuẩn hóa Google Business Profile, SMS sau dịch vụ hợp luật Mỹ, song song ads combo dịch vụ.</p>
+        </article>
+        <article class="case-card">
+          <span class="case-tag">Nhà hàng — US (minh họa)</span>
+          <h3>Cuối tuần đông khách &amp; order</h3>
+          <div class="case-result">
+            <div>
+              <strong>2.4x</strong>
+              <span>ROAS ads (bước đầu)</span>
+            </div>
+            <div>
+              <strong>+22%</strong>
+              <span>Cuộc gọi / form từ CTA</span>
+            </div>
+          </div>
+          <p>Radius 3–8 dặm, A/B theo lunch vs dinner; landing “menu + gọi / form”; tối ưu Yelp/Google nếu có.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block blush">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow" data-i18n="quote_eyebrow">Khách hàng nói gì</p>
+        <h2 data-i18n="quote_h2">Phản hồi sau khi chạy chiến dịch</h2>
+        <p data-i18n="quote_p">Trích lời mẫu — đổi tên và địa điểm cho phù hợp thương hiệu của bạn.</p>
+      </div>
+      <div class="testimonial-grid">
+        <blockquote class="quote-card">
+          <p class="stars" aria-label="5 sao">★★★★★</p>
+          <p class="quote-text">
+            “Trước chỉ boost bừa bãi, không biết lead từ đâu. Sau khi có landing rõ CTA và pixel, cuộc gọi / tin nhắn nhìn báo cáo được rõ hơn.”
+          </p>
+          <footer class="quote-author">
+            <span class="avatar">LT</span>
+            <div>
+              <strong>Chị Lan</strong>
+              <span>Tiệm nails · Houston area (mẫu)</span>
+            </div>
+          </footer>
+        </blockquote>
+        <blockquote class="quote-card">
+          <p class="stars" aria-label="5 sao">★★★★★</p>
+          <p class="quote-text">
+            “Review trên Google Maps lên đều sau khi chỉ mấy câu follow-up phù hợp cách làm nail ở Mỹ. Tiệm hiện trên map rõ hơn, khách search ‘nails near me’ dễ thấy.”
+          </p>
+          <footer class="quote-author">
+            <span class="avatar">HT</span>
+            <div>
+              <strong>Chị Hương</strong>
+              <span>Nail bar · Southern CA (mẫu)</span>
+            </div>
+          </footer>
+        </blockquote>
+        <blockquote class="quote-card">
+          <p class="stars" aria-label="5 sao">★★★★★</p>
+          <p class="quote-text">
+            “Cuối tuần đông khách hơn khi chỉnh target theo zip và hình món đúng taste khách địa phương. Họ chỉnh budget giờ cao điểm rất nhanh.”
+          </p>
+          <footer class="quote-author">
+            <span class="avatar">MK</span>
+            <div>
+              <strong>Anh Minh</strong>
+              <span>Quán ăn gia đình · Dallas–Fort Worth (mẫu)</span>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="block white">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow" data-i18n="trust_eyebrow">Vì sao tin cậy</p>
+        <h2 data-i18n="trust_h2">Quy trình &amp; minh bạch kỹ thuật</h2>
+        <p data-i18n="trust_p">Không hứa “top 1” vô thời hạn — cam kết đo lường và tối ưu có dữ liệu.</p>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-item">
+          <b data-i18n="trust_1b">Theo dõi chuyển đổi</b>
+          <span data-i18n="trust_1s">Pixel Meta, GA4, gắn sự kiện gọi / form / nhắn tin theo brief.</span>
+        </div>
+        <div class="trust-item">
+          <b data-i18n="trust_2b">Báo cáo định kỳ</b>
+          <span data-i18n="trust_2s">Chi tiêu, CPC/CPM, CPA, creative top — giải thích bằng ngôn ngữ kinh doanh.</span>
+        </div>
+        <div class="trust-item">
+          <b data-i18n="trust_3b">Tối ưu liên tục</b>
+          <span data-i18n="trust_3s">Tắt/bật nhóm quảng cáo yếu, scale nhóm hiệu quả, test audience mới.</span>
+        </div>
+        <div class="trust-item">
+          <b data-i18n="trust_4b">Tuân thủ nền tảng</b>
+          <span data-i18n="trust_4s">Creative &amp; landing tránh vi phạm chính sách; chiến lược review theo hướng dẫn Google.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block blush" id="lo-trinh-quang-cao">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow" data-i18n="fun_eyebrow">Lộ trình tích hợp</p>
+        <h2 data-i18n="fun_h2">Website là hub — Facebook &amp; follow kéo người — Google review củng cố tin cậy</h2>
+        <p data-i18n="fun_p">Làm web / viết landing trước cho rõ CTA; đồng thời chạy follow và fanpage (thiết kế + đăng đều) để tăng inbox; review Google Maps giúp khách còn lăn tăn quyết định ghé, gọi hoặc nhắn tin qua kênh bạn.</p>
+      </div>
+      <div class="funnel-wrap">
+        <div class="funnel-step">
+          <b data-i18n="fun_s1b">Bước 1</b>
+          <strong data-i18n="fun_s1t">Website &amp; nội dung</strong>
+          <p data-i18n="fun_s1p">Viết copy, layout, ảnh dịch vụ / món; CTA gọi, Messenger/SMS, form và tích hợp link hoặc embed theo brief. Chuẩn mobile &amp; tốc độ để khi chạy follow / ads đều có “điểm đến” tốt.</p>
+        </div>
+        <span class="funnel-arrow" aria-hidden="true">→</span>
+        <div class="funnel-step">
+          <b data-i18n="fun_s2b">Bước 2</b>
+          <strong data-i18n="fun_s2t">Chạy follow &amp; Facebook hằng ngày / tuần</strong>
+          <p data-i18n="fun_s2p">Thiết kế template bài đăng (ảnh, chữ, story-style); lịch đăng Facebook theo ngày hoặc tuần; kết hợp chiến dịch tăng follow &amp; engagement trên Meta / Instagram, kéo về inbox và website.</p>
+        </div>
+        <span class="funnel-arrow" aria-hidden="true">→</span>
+        <div class="funnel-step">
+          <b data-i18n="fun_s3b">Bước 3</b>
+          <strong data-i18n="fun_s3t">Review Google Maps</strong>
+          <p data-i18n="fun_s3p">Sau trải nghiệm thật, khách được hướng dẫn để lại đánh giá — tăng rating &amp; hiển thị local bền vững.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block white" id="dich-vu">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="svc_eyebrow">Dịch vụ</p>
+        <h2 data-i18n="svc_h2">Bốn dịch vụ cốt lõi — đóng lẻ hoặc trọn gói</h2>
+        <p data-i18n="svc_p">Tập trung website, chạy follow, review Google và Facebook (tạo nội dung + design &amp; đăng định kỳ) cho tiệm nail &amp; nhà hàng tại Mỹ. Tuỳ brief để ghép scope, CTA và liên kết / công cụ bạn cần; ưu tiên KPI rõ ràng.</p>
+      </div>
+      <div class="cards">
+        <article class="svc-card">
+          <div class="svc-icon" aria-hidden="true">◇</div>
+          <h3 data-i18n="svc_w_h">Làm website &amp; viết nội dung</h3>
+          <p data-i18n="svc_w_p">Landing &amp; multi-page: cấu trúc trang, viết copy tiếng Anh / Việt, hình ảnh và CTA rõ — tối ưu tốc độ &amp; mobile; tích hợp form, pixel/GA4 để đo khi chạy follow.</p>
+          <ul class="list-check">
+            <li data-i18n="svc_w_1">Wireframe &amp; 1 trang hoặc multi-page (tuỳ gói)</li>
+            <li data-i18n="svc_w_2">Core Web Vitals, SEO on-page cơ bản</li>
+            <li data-i18n="svc_w_3">CTA gọi / form / Messenger &amp; sự kiện chuyển đổi</li>
+          </ul>
+        </article>
+        <article class="svc-card">
+          <div class="svc-icon" aria-hidden="true">◎</div>
+          <h3 data-i18n="svc_s_h">Chạy follow (Meta &amp; Instagram)</h3>
+          <p data-i18n="svc_s_p">Tăng follow và tương tác đúng tệp khách nails / dining quanh zip &amp; city; kết hợp nội dung organic + boost có kiểm soát để inbox &amp; lượt xem profile tăng bền.</p>
+          <ul class="list-check">
+            <li data-i18n="svc_s_1">Audit page, competitor &amp; định vị tệp lookalike / interest</li>
+            <li data-i18n="svc_s_2">Chiến dịch follow, engagement, tin nhắn (tuỳ gói)</li>
+            <li data-i18n="svc_s_3">Báo cáo: follow, reach, inbox — tối ưu creative &amp; nhịp tuần</li>
+          </ul>
+        </article>
+        <article class="svc-card">
+          <div class="svc-icon" aria-hidden="true">★</div>
+          <h3 data-i18n="svc_g_h">Review Google Maps (ưu tiên)</h3>
+          <p data-i18n="svc_g_p">Tối ưu Google Business Profile, ảnh, bài đăng, Q&amp;A; quy trình xin review từ khách thật sau dịch vụ — tuân policy, tránh rủi ro gỡ review.</p>
+          <ul class="list-check">
+            <li data-i18n="svc_g_1">Chuẩn hóa category, giờ, thuộc tính dịch vụ</li>
+            <li data-i18n="svc_g_2">SMS / thẻ QR / mẫu nhắn review (opt-in)</li>
+            <li data-i18n="svc_g_3">Theo dõi rating, volume, phản hồi 1–5 sao</li>
+          </ul>
+        </article>
+        <article class="svc-card">
+          <div class="svc-icon" aria-hidden="true">▸</div>
+          <h3 data-i18n="svc_fb_h">Facebook fanpage — design &amp; đăng bài</h3>
+          <p data-i18n="svc_fb_p">Tạo nội dung, thiết kế ảnh / carousel / cover, caption hai ngôn ngữ nếu cần; đăng theo lịch hằng ngày hoặc hằng tuần — giữ fanpage sống cho tiệm nails &amp; nhà hàng.</p>
+          <ul class="list-check">
+            <li data-i18n="svc_fb_1">Lịch nội dung &amp; tone of voice thương hiệu</li>
+            <li data-i18n="svc_fb_2">Thiết kế template bài (món, dịch vụ, khuyến mãi, behind)</li>
+            <li data-i18n="svc_fb_3">Đăng bài &amp; chỉnh sửa nhẹ theo tương tác (daily / weekly)</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block blush" id="bang-gia">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow" data-i18n="price_eyebrow">Bảng giá</p>
+        <h2 data-i18n="price_h2">Gói Basic — Pro — Custom</h2>
+        <p data-i18n="price_intro">Giá tham khảo (USD hoặc VND tuỳ hợp đồng): gói có thể gồm website, chạy follow, review Google và/hoặc Facebook đăng bài + design. Brief: ngành, bang/city, KPI (follow, review, inbox…) và lịch đăng mong muốn.</p>
+        <p class="price-hosting-callout" data-i18n-html="price_hosting">
+          <strong>Tên miền &amp; hosting:</strong> năm đầu <strong>miễn phí</strong> khi triển khai website theo hợp đồng. <strong>Từ năm thứ hai trở đi</strong>, phí duy trì hosting &amp; vận hành cơ bản <strong>$20/tháng</strong> — phạm vi chi tiết trong hợp đồng.
+        </p>
+      </div>
+      <div class="pricing-grid">
+        <article class="price-card">
+          <h3 data-i18n="pack_basic_h">Basic</h3>
+          <p class="price-tag" data-i18n="pack_basic_price">Từ 8.000.000đ</p>
+          <p class="price-desc" data-i18n="pack_basic_desc">Mới mở cửa hàng, cần landing gọn, sẵn sàng gắn CTA &amp; đo cơ bản.</p>
+          <ul>
+            <li data-i18n="pack_basic_1">Landing 1 trang (WordPress / HTML tuỳ stack)</li>
+            <li data-i18n="pack_basic_2">Form / gọi / Messenger / SMS + tối ưu mobile (US)</li>
+            <li data-i18n="pack_basic_3">Cài Pixel + GA4 cơ bản + 1 sự kiện chuyển đổi</li>
+            <li data-i18n="pack_basic_4">1 vòng chỉnh sửa nội dung &amp; giao diện</li>
+            <li data-i18n="pack_basic_5">Hỗ trợ kỹ thuật 15 ngày sau bàn giao</li>
+            <li data-i18n="pack_basic_6">SEO on-page cơ bản: title, mô tả, heading, ALT ảnh</li>
+            <li data-i18n="pack_basic_7">Checklist Google Business Profile: giờ, category, ảnh cửa hàng / dịch vụ / món</li>
+            <li data-i18n="pack_basic_8">Gói copy mẫu: headline / đoạn lead + 2 snippet CTA cho trang chính (nails hoặc dining)</li>
+          </ul>
+          <a class="btn btn-ghost" href="#lien-he" data-i18n="pack_btn">Chọn gói</a>
+        </article>
+        <article class="price-card featured">
+          <span class="price-badge" data-i18n="pack_popular">Phổ biến</span>
+          <h3 data-i18n="pack_pro_h">Pro</h3>
+          <p class="price-tag" data-i18n="pack_pro_price">Từ 18.000.000đ</p>
+          <p class="price-desc" data-i18n="pack_pro_desc">Salon / nhà hàng cần web nhiều trang, chuẩn kỹ thuật &amp; nội dung bài bản.</p>
+          <ul>
+            <li data-i18n="pack_pro_1">Tới 5 trang (giới thiệu, dịch vụ, FAQ, liên hệ…)</li>
+            <li data-i18n="pack_pro_2">Tối ưu tốc độ &amp; hình ảnh (LCP, lazy-load) cho trải nghiệm &amp; marketing</li>
+            <li data-i18n="pack_pro_3">Pixel / GA4 + chuyển đổi gọi, form, chat (Meta / SMS tuỳ setup)</li>
+            <li data-i18n="pack_pro_4">2 vòng chỉnh sửa + tư vấn CTA &amp; copy ngắn</li>
+            <li data-i18n="pack_pro_5">30 ngày hỗ trợ + checklist bàn giao (hosting, DNS, tracking cơ bản)</li>
+            <li data-i18n="pack_pro_6">Đồng bộ nội dung web ↔ Google Business: giờ, CTA, ảnh; gợi ý post / Q&amp;A khớp messaging trên site</li>
+            <li data-i18n="pack_pro_7">Schema LocalBusiness / breadcrumb (tuỳ scope); Open Graph &amp; Twitter card cho chia sẻ link</li>
+            <li data-i18n="pack_pro_8">Outline cập nhật nội dung 4 tuần cho các trang chính (dịch vụ, ưu đãi, CTA)</li>
+            <li data-i18n="pack_pro_9">Session 45′ hướng dẫn đọc GA4 &amp; pixel trên site (form, cuộc gọi, nhấn CTA) — kèm tài liệu hoặc ghi hình</li>
+          </ul>
+          <a class="btn btn-primary" href="#lien-he" data-i18n="pack_btn">Chọn gói</a>
+        </article>
+        <article class="price-card">
+          <h3 data-i18n="pack_cust_h">Custom</h3>
+          <p class="price-tag" data-i18n="pack_cust_price">Theo dự án</p>
+          <p class="price-desc" data-i18n="pack_cust_desc">Nhiều trang, layout tuỳ biến, đa ngôn ngữ — scope &amp; tích hợp theo thỏa thuận.</p>
+          <ul>
+            <li data-i18n="pack_cust_1">Wireframe &amp; scope rõ ràng, milestone thanh toán</li>
+            <li data-i18n="pack_cust_2">Form, newsletter; nhúng script / link / widget bên thứ ba do khách cung cấp (đặt bàn, menu, thanh toán…)</li>
+            <li data-i18n="pack_cust_3">Song ngữ EN + tiếng Việt (tuỳ đối tượng khách Mỹ / Việt kiều) &amp; SEO kỹ thuật</li>
+            <li data-i18n="pack_cust_4">SLA bảo trì &amp; tối ưu theo tháng (tuỳ thỏa thuận)</li>
+            <li data-i18n="pack_cust_5">Lộ trình bàn giao &amp; mở rộng site (phase 2–3) theo roadmap</li>
+            <li data-i18n="pack_cust_6">Multi-location: cấu trúc site + GBP &amp; schema cho nhiều cửa hàng</li>
+            <li data-i18n="pack_cust_7">Site lớn: nhiều chi nhánh, menu / catalog dịch vụ phân tầng, animation &amp; section tuỳ biến</li>
+            <li data-i18n="pack_cust_8">Automation nhẹ sau form (email cảm ơn, forward lead) — theo công cụ khách chọn</li>
+            <li data-i18n="pack_cust_9">Mini brand kit cho ads &amp; web: headline mẫu, USP, tone of voice</li>
+          </ul>
+          <a class="btn btn-ghost" href="#lien-he" data-i18n="pack_btn_talk">Trao đổi scope</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block white" id="website-da-lam">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="web_eyebrow">Dự án web</p>
+        <h2 data-i18n="web_h2">Danh sách website đã làm</h2>
+        <p data-i18n="web_intro">Website live cho tiệm nails &amp; nhà hàng tại Mỹ — xem trực tiếp từng link bên dưới.</p>
+      </div>
+      <div class="web-grid">
+        <article class="web-item">
+          <span class="web-tag">Dining · GA</span>
+          <h3>JA Kitchen Asian Fusion</h3>
+          <p class="web-meta">Augusta, GA · menu · signature dishes · call to order · fusion Việt / Á</p>
+          <a class="outlink" href="https://jakitchenasianfusion.com/" target="_blank" rel="noopener" data-i18n="web_view">Xem website ↗</a>
+        </article>
+        <article class="web-item">
+          <span class="web-tag">Nails · IL</span>
+          <h3>Crystal Nails and Spa</h3>
+          <p class="web-meta">Forsyth, IL · manicure · pedicure · waxing · review khách</p>
+          <a class="outlink" href="https://crystalnailsandspaforsyth.com/" target="_blank" rel="noopener" data-i18n="web_view">Xem website ↗</a>
+        </article>
+        <article class="web-item">
+          <span class="web-tag">Nails · TX</span>
+          <h3>Coco Nails &amp; Spa</h3>
+          <p class="web-meta">Austin, TX · dịch vụ nails &amp; spa · gallery · lịch nội dung</p>
+          <a class="outlink" href="https://coconailsspaaustin.com/" target="_blank" rel="noopener" data-i18n="web_view">Xem website ↗</a>
+        </article>
+        <article class="web-item">
+          <span class="web-tag">Nails · FL</span>
+          <h3>Velouré Nails &amp; Spa</h3>
+          <p class="web-meta">Boynton Beach, FL · bảng giá dịch vụ · CTA &amp; liên kết ngoài · gallery</p>
+          <a class="outlink" href="https://velourenailspa.com/" target="_blank" rel="noopener" data-i18n="web_view">Xem website ↗</a>
+        </article>
+        <article class="web-item">
+          <span class="web-tag">Nails · GA</span>
+          <h3>OASIS Nail &amp; Spa</h3>
+          <p class="web-meta">Savannah, GA · menu dịch vụ · gallery · testimonial</p>
+          <a class="outlink" href="https://oasisnailandspa.com/" target="_blank" rel="noopener" data-i18n="web_view">Xem website ↗</a>
+        </article>
+      </div>
+      <div class="web-table-wrap">
+        <table class="web-table">
+          <thead>
+            <tr>
+              <th data-i18n="tbl_no">#</th>
+              <th data-i18n="tbl_project">Dự án</th>
+              <th data-i18n="tbl_sector">Ngành</th>
+              <th data-i18n="tbl_type">Loại / stack</th>
+              <th data-i18n="tbl_link">Liên kết</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>JA Kitchen Asian Fusion</td>
+              <td>Dining · GA</td>
+              <td>Menu · gọi order / takeout</td>
+              <td><a href="https://jakitchenasianfusion.com/" target="_blank" rel="noopener" data-i18n="web_view">Xem website ↗</a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Crystal Nails and Spa</td>
+              <td>Nails · IL</td>
+              <td>Landing · dịch vụ · social proof</td>
+              <td><a href="https://crystalnailsandspaforsyth.com/" target="_blank" rel="noopener" data-i18n="web_view">Xem website ↗</a></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Coco Nails &amp; Spa</td>
+              <td>Nails · TX</td>
+              <td>Multi-section · gallery</td>
+              <td><a href="https://coconailsspaaustin.com/" target="_blank" rel="noopener" data-i18n="web_view">Xem website ↗</a></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Velouré Nails &amp; Spa</td>
+              <td>Nails · FL</td>
+              <td>Giá gói · CTA · gallery</td>
+              <td><a href="https://velourenailspa.com/" target="_blank" rel="noopener" data-i18n="web_view">Xem website ↗</a></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>OASIS Nail &amp; Spa</td>
+              <td>Nails · GA</td>
+              <td>Services · gallery · reviews</td>
+              <td><a href="https://oasisnailandspa.com/" target="_blank" rel="noopener" data-i18n="web_view">Xem website ↗</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="portfolio-note" data-i18n-html="web_note">
+        <strong>Lưu ý:</strong> Các link trên là website đang hoạt động. Khi có thêm dự án, bạn có thể nhân bản khối <code>&lt;article class="web-item"&gt;</code> và một dòng trong bảng.
+      </p>
+    </div>
+  </section>
+
+  <section class="block white" id="da-chay-ads">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="run_eyebrow">Hoạt động đã chạy</p>
+        <h2 data-i18n="run_h2">Fanpage Facebook &amp; Google Ads đã triển khai</h2>
+        <p data-i18n="run_p">Bảng mẫu theo từng tài khoản / chiến dịch — sửa nội dung cho khớp hồ sơ thật của bạn.</p>
+      </div>
+      <div class="run-split">
+        <div class="run-col">
+          <h3><span class="badge-plat">Facebook / Meta</span> <span data-i18n="run_fb_h">Fanpage &amp; kênh</span></h3>
+          <p class="run-lead" data-i18n="run_fb_lead">Ví dụ cho tiệm nails &amp; dining tại Mỹ — DM, gọi điện hoặc chỉ đường về landing / fanpage.</p>
+          <ul class="run-ul">
+            <li>
+              <strong>Page: Viet Kitchen — nhà hàng (minh họa)</strong>
+              <span>Chiến dịch: traffic → call &amp; chỉ đường · Radius 5–8 dặm · Creative món &amp; “happy hour”</span>
+            </li>
+            <li>
+              <strong>Page: Glow Nail Bar — tiệm nails (minh họa)</strong>
+              <span>Chiến dịch: tin nhắn / cuộc gọi + IG engagement · Metro Texas</span>
+            </li>
+            <li>
+              <strong>Page: Pearl Nails — nail salon (minh họa)</strong>
+              <span>Reels before/after + offer dip powder · retarget khách đã xem video</span>
+            </li>
+            <li>
+              <strong>Page: Phở &amp; Grill — counter / takeout</strong>
+              <span>Chiến dịch: “order pickup” &amp; click-to-call · tuân chính sách quảng cáo Meta</span>
+            </li>
+          </ul>
+        </div>
+        <div class="run-col">
+          <h3><span class="badge-plat">Google</span> <span data-i18n="run_g_h">Ads &amp; Maps</span></h3>
+          <p class="run-lead" data-i18n="run_g_lead">Cấu hình phổ biến cho cửa hàng local ở Mỹ (GBP + Search + PMax / local).</p>
+          <ul class="run-ul">
+            <li>
+              <strong>Search — “nails near me + city / ZIP”</strong>
+              <span>Mục tiêu: call &amp; tap-to-call · định vị quanh tiệm</span>
+            </li>
+            <li>
+              <strong>Search — “vietnamese restaurant + khu vực”</strong>
+              <span>Từ khóa dining + địa lý; mở rộng món / brand (tuỳ brief)</span>
+            </li>
+            <li>
+              <strong>Performance Max / Local — GBP liên kết</strong>
+              <span>Chỉ đường, lượt ghé, cuộc gọi từ Maps</span>
+            </li>
+            <li>
+              <strong>Display / Demand Gen remarketing</strong>
+              <span>Tái tiếp cận khách đã vào site hoặc xem video nails / món</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="portfolio-note" data-i18n-html="run_note">
+        Tên fanpage và chiến dịch trên là <strong>mẫu điền sẵn</strong>. Khi gửi cho khách hàng, hãy đổi thành dự án thật bạn đã quản lý để tránh hiểu nhầm.
+      </p>
+    </div>
+  </section>
+
+  <section class="block white" id="quy-trinh">
+    <div class="wrap two-col">
+      <div class="section-head" style="margin-bottom: 0">
+        <p class="eyebrow" data-i18n="proc_eyebrow">Quy trình</p>
+        <h2 data-i18n="proc_h2">Từ brief đến báo cáo — rõ ràng từng bước</h2>
+        <p style="margin-top: 14px" data-i18n="proc_p">Bạn biết đang làm gì, vì sao, bao giờ tối ưu tiếp.</p>
+      </div>
+      <ol class="step-list">
+        <li>
+          <span class="step-num">1</span>
+          <div>
+            <h3 data-i18n="proc_1h">Audit &amp; mục tiêu</h3>
+            <p data-i18n="proc_1p">Brief: tiệm nails hay nhà hàng, bang / city / ZIP, KPI và ngân sách USD; rà website, GBP, pixel, GA4, tài khoản ads.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <div>
+            <h3 data-i18n="proc_2h">Kế hoạch &amp; timeline</h3>
+            <p data-i18n="proc_2p">Đề xuất cấu trúc chiến dịch, creative, tệp; dự kiến pha test và scale.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <div>
+            <h3 data-i18n="proc_3h">Triển khai &amp; tối ưu</h3>
+            <p data-i18n="proc_3p">Chạy live, đọc số liệu hằng ngày / tuần; cắt tệp yếu, nhân bản tệp mạnh.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">4</span>
+          <div>
+            <h3 data-i18n="proc_4h">Tổng kết &amp; mở rộng</h3>
+            <p data-i18n="proc_4p">Báo cáo kỳ, bài học, đề xuất ngân sách và hướng mở rộng kênh.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block blush">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow" data-i18n="ind_eyebrow">Ngành phục vụ</p>
+        <h2 data-i18n="ind_h2">Chúng tôi chỉ tập trung nails &amp; nhà hàng tại Mỹ</h2>
+      </div>
+      <div class="industry-tags" style="justify-content: center">
+        <span>Nail salon full-service</span>
+        <span>Nail bar · dip · acrylic · gel</span>
+        <span>Nhà hàng Việt Nam tại Mỹ</span>
+        <span>Quán phở / counter / takeout</span>
+        <span>Nhà hàng gia đình · gọi / takeout</span>
+        <span>Ads theo bang ZIP (US only)</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block white" id="faq">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow" data-i18n="faq_eyebrow">FAQ</p>
+        <h2 data-i18n="faq_h2">Câu hỏi thường gặp</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary data-i18n="faq_q1">Bao lâu thì thấy kết quả?</summary>
+          <div class="faq-a" data-i18n-html="faq_a1">
+            Tuỳ ngành và dữ liệu hiện có: thường 2–4 tuần cho pha test; 6–8 tuần để CPA/ROAS ổn định hơn. Chúng tôi báo trước kỳ vọng thực tế trong buổi đầu.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq_q2">Ngân sách tối thiểu để chạy ads?</summary>
+          <div class="faq-a" data-i18n-html="faq_a2">
+            Nên có ngân sách đủ để học máy (thường từ mức tối thiểu do nền tảng quy định trở lên). Chúng tôi tư vấn mức phù hợp theo vùng và độ cạnh địa phương.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq_q3">Có cam kết số lead cố định không?</summary>
+          <div class="faq-a" data-i18n-html="faq_a3">
+            Không cam kết cứng số lead cho mọi hợp đồng — phụ thuộc thị trường và chất lượng offer. Cam kết rõ: quy trình tối ưu, báo cáo minh bạch, điều chỉnh dựa trên dữ liệu.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq_q4">Review Google có “mua” không?</summary>
+          <div class="faq-a" data-i18n-html="faq_a4">
+            Không. Chúng tôi hỗ trợ quy trình mời khách hàng thật sau dịch vụ, tuân thủ chính sách Google — tránh rủi ro bị gỡ đánh giá hoặc phạt profile.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq_q5">Có gói trọn: web + follow + Facebook đăng bài không?</summary>
+          <div class="faq-a" data-i18n-html="faq_a5">
+            Có — ghép theo nhu cầu: thường làm web / landing &amp; copy trước hoặc song song, rồi bật chạy follow và lịch đăng Facebook (ngày hoặc tuần) để có điểm đến rõ và inbox ổn định. Review Google có thể chạy song song khi đã có khách thật.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq_q6">Tên miền và hosting tính thế nào?</summary>
+          <div class="faq-a" data-i18n-html="faq_a6">
+            Với dự án website theo hợp đồng: <strong>năm đầu tên miền &amp; hosting được bao trong ưu đãi</strong> (miễn phí theo điều khoản đã ký). <strong>Sau năm đầu</strong>, phí duy trì để giữ site online và vận hành hosting cơ bản là <strong>$20/tháng</strong> — có thể điều chỉnh nếu scope (SSL, backup, mức traffic…) thay đổi; mọi thứ ghi rõ trên hợp đồng trước khi ký.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section" id="lien-he">
+    <div class="wrap">
+      <div class="cta-box">
+        <h2 data-i18n="cta_h2">Báo giá trong 72 giờ — web, follow, review &amp; Facebook</h2>
+        <p data-i18n="cta_p">Gửi loại hình, bang / city / ZIP, link fanpage / web / Google Business (nếu có). Cho biết bạn cần: làm web, chạy follow, review Maps, hay gói Facebook (số bài / tuần hoặc / ngày) — chúng tôi ghép báo giá theo scope.</p>
+        <div class="cta-actions">
+          <a class="btn btn-white" href="mailto:sy69dz@gmail.com" data-i18n="cta_email">Email</a>
+          <a class="btn btn-outline-light" href="https://m.me/" target="_blank" rel="noopener" data-i18n="cta_msg">Messenger</a>
+          <a class="btn btn-outline-light" href="https://zalo.me/" target="_blank" rel="noopener" data-i18n="cta_zalo">Zalo</a>
+          <a class="btn btn-outline-light" href="tel:+12292280010" data-i18n="cta_call">Gọi 229-228-0010</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap foot-grid">
+      <div>
+        <a class="brand" href="#" style="margin-bottom: 12px" aria-label="Daisy Shye — về đầu trang">
+          <span class="brand-logo-footer">
+            <img class="brand-img" src="logo.png" alt="Daisy Shye — Digital Marketing &amp; Growth Solutions" width="220" height="56" decoding="async" />
+          </span>
+        </a>
+        <p style="max-width: 280px; line-height: 1.6" data-i18n="foot_tag">Chuyên tiệm nails &amp; nhà hàng tại Mỹ — ads đo được, review thật, quy trình rõ ràng.</p>
+      </div>
+      <div>
+        <strong data-i18n="foot_menu">Menu</strong>
+        <a href="#dan-chung" data-i18n="nav_proof">Dẫn chứng</a>
+        <a href="#lo-trinh-quang-cao" data-i18n="nav_funnel">Web · Follow · Review</a>
+        <a href="#dich-vu" data-i18n="nav_svc">Dịch vụ</a>
+        <a href="#bang-gia" data-i18n="nav_price">Bảng giá</a>
+        <a href="#website-da-lam" data-i18n="foot_web">Website đã làm</a>
+        <a href="#da-chay-ads" data-i18n="nav_ads">Đã chạy</a>
+        <a href="#quy-trinh" data-i18n="foot_proc">Quy trình</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      </div>
+      <div>
+        <strong data-i18n="foot_contact">Liên hệ</strong>
+        <a href="tel:+12292280010">229-228-0010</a>
+        <a href="mailto:sy69dz@gmail.com">sy69dz@gmail.com</a>
+        <span style="display: block; padding-top: 8px; opacity: 0.8" data-i18n="foot_hint">Daisy Shye · phản hồi nhanh qua điện thoại hoặc email.</span>
+      </div>
+    </div>
+    <div class="wrap foot-bottom">© <span id="y"></span> Daisy Shye</div>
+  </footer>
+
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-panel" id="chatPanel" role="dialog" aria-label="Chat">
+      <p data-i18n="chat_title">Liên hệ nhanh</p>
+      <a href="mailto:sy69dz@gmail.com" data-i18n="chat_email">Email</a>
+      <a href="https://m.me/" target="_blank" rel="noopener" data-i18n="chat_msg">Messenger</a>
+      <a href="https://zalo.me/" target="_blank" rel="noopener" data-i18n="chat_zalo">Zalo</a>
+      <a href="tel:+12292280010" data-i18n="chat_call">Gọi 229-228-0010</a>
+    </div>
+    <button type="button" class="chat-fab" id="chatFab" aria-expanded="false" aria-controls="chatPanel" aria-label="Mở chat">💬</button>
+  </div>
+
+  <script src="i18n-en.js"></script>
+  <script>
+    (function () {
+      var EN = window.__I18N_EN || {};
+      var VI_TITLE = "Daisy Shye — Web, follow, review Google & Facebook cho nails / dining tại Mỹ";
+      var VI_META =
+        "Daisy Shye — website & viết nội dung, chạy follow Meta/IG, review Google Maps, Facebook design & đăng bài ngày-tuần cho tiệm nail & nhà hàng tại Mỹ. Liên hệ: sy69dz@gmail.com · 229-228-0010.";
+
+      function captureDefaults() {
+        document.querySelectorAll("[data-i18n]").forEach(function (el) {
+          if (!el.dataset.i18nVi) el.dataset.i18nVi = el.textContent;
+        });
+        document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+          if (!el.dataset.i18nViHtml) el.dataset.i18nViHtml = el.innerHTML;
+        });
+      }
+
+      function syncChatFabA11y() {
+        var w = document.getElementById("chatWidget");
+        var fab = document.getElementById("chatFab");
+        if (!w || !fab) return;
+        var open = w.classList.contains("is-open");
+        var isEn = document.documentElement.lang === "en";
+        fab.setAttribute(
+          "aria-label",
+          open ? (isEn ? "Close chat menu" : "Đóng menu chat") : isEn ? "Open chat menu" : "Mở menu chat"
+        );
+      }
+
+      function refreshNavToggleAria() {
+        var h = document.querySelector("header.site");
+        var t = document.getElementById("navToggle");
+        if (!t || !h) return;
+        var open = h.classList.contains("nav-open");
+        var isEn = document.documentElement.lang === "en";
+        t.setAttribute(
+          "aria-label",
+          open ? (isEn ? "Close menu" : "Đóng menu") : isEn ? "Open menu" : "Mở menu"
+        );
+      }
+
+      function applyLang(lang) {
+        var isEn = lang === "en";
+        document.documentElement.lang = isEn ? "en" : "vi";
+        document.querySelectorAll("[data-i18n]").forEach(function (el) {
+          var k = el.dataset.i18n;
+          el.textContent = isEn && EN[k] != null ? EN[k] : el.dataset.i18nVi;
+        });
+        document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+          var k = el.dataset.i18nHtml;
+          el.innerHTML = isEn && EN[k] != null ? EN[k] : el.dataset.i18nViHtml;
+        });
+        document.title = isEn && EN.doc_title ? EN.doc_title : VI_TITLE;
+        var meta = document.querySelector('meta[name="description"]');
+        if (meta) meta.setAttribute("content", isEn && EN.meta_desc ? EN.meta_desc : VI_META);
+        document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+          var on = btn.getAttribute("data-set-lang") === lang;
+          btn.classList.toggle("active", on);
+          btn.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+        localStorage.setItem("rs_lang", lang);
+        syncChatFabA11y();
+        refreshNavToggleAria();
+      }
+
+      captureDefaults();
+      var saved = localStorage.getItem("rs_lang");
+      if (saved === "en") applyLang("en");
+
+      document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          applyLang(btn.getAttribute("data-set-lang"));
+        });
+      });
+
+      var w = document.getElementById("chatWidget");
+      var fab = document.getElementById("chatFab");
+      if (fab && w) {
+        fab.addEventListener("click", function () {
+          w.classList.toggle("is-open");
+          fab.setAttribute("aria-expanded", w.classList.contains("is-open") ? "true" : "false");
+          syncChatFabA11y();
+        });
+      }
+
+      var header = document.querySelector("header.site");
+      var navToggle = document.getElementById("navToggle");
+      var mainNav = document.getElementById("mainNav");
+      if (navToggle && header && mainNav) {
+        function setNavOpen(open) {
+          header.classList.toggle("nav-open", open);
+          document.body.classList.toggle("nav-menu-open", open);
+          navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+          refreshNavToggleAria();
+        }
+        navToggle.addEventListener("click", function () {
+          setNavOpen(!header.classList.contains("nav-open"));
+        });
+        mainNav.querySelectorAll("a, button").forEach(function (el) {
+          el.addEventListener("click", function () {
+            if (window.matchMedia("(max-width: 900px)").matches) setNavOpen(false);
+          });
+        });
+        window.addEventListener("resize", function () {
+          if (window.matchMedia("(min-width: 901px)").matches) setNavOpen(false);
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") setNavOpen(false);
+        });
+        refreshNavToggleAria();
+      }
+
+      document.getElementById("y").textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
