@@ -106,40 +106,40 @@ window.__I18N_EN = {
   svc_fb_2: "Designed templates (dishes, services, promos, BTS)",
   svc_fb_3: "Scheduled posting & light engagement tuning (daily / weekly cadence)",
   price_eyebrow: "Pricing",
-  price_h2: "Basic — Pro — Custom",
+  price_h2: "Basic — Plus — Custom",
   price_intro:
-    "Reference pricing (USD or VND): packages may combine website, follow, Google reviews and/or Facebook design + posting. Share vertical, state/city, KPIs (follow, reviews, inbox…) and desired posting cadence.",
+    "Standard pricing in <strong>USD</strong>: <strong>Basic $300</strong> (site + Facebook page + Google &amp; reviews) and <strong>Plus $500</strong> (more hands-on care, stronger focus on views &amp; follows). Custom quoted to scope. Share your state/city and goals.",
   price_hosting:
     "<strong>Domain &amp; hosting:</strong> <strong>first year included</strong> when you launch a site with us (per contract). <strong>Starting year two</strong>, ongoing hosting &amp; basic upkeep is <strong>$20/month</strong> — full scope is spelled out in your agreement.",
   pack_basic_h: "Basic",
-  pack_basic_price: "From 8,000,000 VND",
-  pack_basic_desc: "New salons or restaurants that need a compact landing with clear CTAs and basic measurement.",
-  pack_basic_1: "Landing page (WordPress / HTML per stack)",
-  pack_basic_2: "Form / call / Messenger / SMS + mobile polish (US)",
-  pack_basic_3: "Pixel + GA4 basics + one conversion event",
-  pack_basic_4: "One revision round on copy & layout",
-  pack_basic_5: "15 days technical support after handover",
-  pack_basic_6: "Basic on-page SEO: titles, meta descriptions, headings, image ALT text",
-  pack_basic_7:
-    "Google Business Profile checklist: hours, categories, storefront, service or dish photos",
-  pack_basic_8:
-    "Starter web copy: headline / lead + two CTA snippets for your main page (nail or dining)",
+  pack_basic_price: "$300",
+  pack_basic_desc:
+    "Website + Facebook page + Google & reviews — a clean, professional online storefront to get you live.",
+  pack_basic_1:
+    "Website / landing (WordPress or HTML): call / form / Messenger–SMS CTAs, mobile-friendly",
+  pack_basic_2:
+    "Facebook page: avatar & cover, designed posts on a simple weekly rhythm",
+  pack_basic_3:
+    "Google Business Profile setup + templates / guidance for real-customer review asks",
+  pack_basic_4: "Basic pixel & GA4; light on-page SEO (titles, descriptions, imagery)",
+  pack_basic_5: "One revision round + 15 days of technical support after launch",
+  pack_basic_6:
+    "Domain & hosting promo year one — see box above; then $20/month ongoing",
   pack_popular: "Popular",
-  pack_pro_h: "Pro",
-  pack_pro_price: "From 18,000,000 VND",
-  pack_pro_desc: "Salons or restaurants that need a richer multi-page site, solid technical quality and content rhythm.",
-  pack_pro_1: "Up to 5 pages (about, services, FAQ, contact…)",
-  pack_pro_2: "Performance & image tuning (LCP, lazy-load) for UX and marketing",
-  pack_pro_3: "Full pixel / GA4 + conversions for calls, forms, chat (Meta / SMS per stack)",
-  pack_pro_4: "Two revision rounds + CTA & short copy coaching",
-  pack_pro_5: "30-day support + handover checklist (hosting, DNS, basic tracking)",
-  pack_pro_6:
-    "Align site copy with Google Business: hours, CTAs, photos; post / Q&A ideas that match on-site messaging",
-  pack_pro_7:
-    "LocalBusiness / breadcrumb schema (per scope); Open Graph & Twitter cards for link shares",
-  pack_pro_8: "4-week outline to refresh core pages (services, promos, CTAs)",
-  pack_pro_9:
-    "45-min walkthrough on GA4 & pixel events on your site (forms, calls, CTA clicks) — doc or recording",
+  pack_pro_h: "Plus",
+  pack_pro_price: "$500",
+  pack_pro_desc:
+    "More hands-on care: richer content and page work, tuned to drive more views and follows than Basic.",
+  pack_pro_1: "Everything in Basic, upgraded quality and cadence of care",
+  pack_pro_2: "Site up to ~5 pages (or a richer single landing) + stronger speed & imagery polish",
+  pack_pro_3:
+    "Facebook: more posts, clearer templates, captions & schedule tuned to engagement",
+  pack_pro_4:
+    "Follow / reach / engagement campaigns on Meta & Instagram — prioritize growth within package scope",
+  pack_pro_5:
+    "Google Maps & reviews aligned tightly with site and page; post / Q&A guidance",
+  pack_pro_6: "Fuller pixel / GA4 + two revision rounds + 30-day support",
+  pack_pro_7: "Short session on reading metrics (inbox, forms, calls) + takeaway notes",
   pack_cust_h: "Custom",
   pack_cust_price: "Project-based",
   pack_cust_desc: "Larger builds, custom layouts, multilingual — scope & integrations per agreement.",
