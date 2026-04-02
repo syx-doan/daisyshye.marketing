@@ -178,8 +178,6 @@ window.__I18N_EN = {
   run_g_h: "Ads & Maps",
   run_g_lead:
     "Common stacks for US local stores (Business Profile + Search + PMax / local).",
-  run_note:
-    "Names above are <strong>placeholders</strong>. Swap in real properties before sending to prospects.",
   proc_eyebrow: "Process",
   proc_h2: "From brief to report — step by step",
   proc_p: "You always know what we’re doing, why, and when we optimise next.",
